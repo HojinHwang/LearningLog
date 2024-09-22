@@ -1,3 +1,15 @@
+### *args
+- *: 인수를 Tuple 형태로 묶는다는 의미
+- 동시에 여러 입력값을 주고 싶을때 사용함
+- args: 명칭일 뿐, 임의로 지정해도 상관없음
+```python
+# *args 사용 예시
+def print_name(*names):
+    for name in names:
+        print(f'my name is {name}')
+print_name('hojin', 'hwang')
+```
+
 ### **kwargs
 - **: 인수를 Dictionary 형태로 묶는다는 의미
 - kwargs: 명칭일 뿐 (Key arguments), 임의로 지정해도 상관없음
