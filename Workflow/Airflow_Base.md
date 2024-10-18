@@ -65,3 +65,23 @@ with DAG(dag_id='xcom_example',
 
 push_task >> pull_task
 ```
+---
+### execution_date.timetuple()
+- execution_date의 정보를 튜플로 반환함
+- Airflow의 execution_date 객체가 Python의 datetime 객체일 때 사용할 수 있는 메서드
+- time.struct_time 객체로 결과값을 반환
+```CSS
+/*결과 값*/
+execution_date.timetuple() 
+time.struct_time(tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec, tm_wday, tm_yday, tm_isdst)
+```
+```python
+# execution_date.timetuple() 예시
+from datetime import datetime
+
+execution_date = datetime(2024, 10, 18, 15, 45, 30)  # 예시 execution_date
+print(execution_date.timetuple())
+# 결과값
+time.struct_time(tm_year=2024, tm_mon=10, tm_mday=18, tm_hour=15, tm_min=45, tm_sec=30, tm_wday=4, tm_yday=292, tm_isdst=-1)
+```
+
